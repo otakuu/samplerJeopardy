@@ -76,15 +76,6 @@ headline.align="center";
 var headline_text = doc.createTextNode("Sampler Jeopardy");
 headline.appendChild(headline_text);
 headline_div.appendChild(headline);
-/*
-var round = doc.createElement("div");
-round.addEventListener( "click", round_click, false );
-var round_h2 = doc.createElement("h2");
-round.appendChild(round_h2);
-var round_text = doc.createTextNode("Runde 1");
-round_h2.appendChild(round_text);
-headline_div.appendChild(round);
-*/
 doc.body.appendChild(headline_div);
 
 return this;
@@ -165,12 +156,6 @@ btn7.appendChild(t7);
 btn7.id="btn7";
 this.div.appendChild(btn7);
 
-/*this.iframe = document.createElement("iframe");
-this.iframe.src="";
-this.iframe.id="playerid";
-this.iframe.width="960";
-this.iframe.height="463";
-*/
 this.iframe = doc.createElement("div");
 this.iframe.id="player";
 this.iframe.style.visibility="hidden";
