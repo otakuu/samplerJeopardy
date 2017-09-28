@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+h1, h3, h4, h5 { font-family:Helvetica,sans-serif; color:#FFA500; font-size:1.5em; }
+h2 { font-family:Helvetica,sans-serif; color:#FFA500; font-size:2em; }
+
+p, td, tr { font-family:Helvetica,sans-serif; color:#FFA500; font-size:1.5em; text-align:center; }
+body { background-color:black; color:#FFA500; border-color:#FFA500; }
+table tbody { background-color:black; color:#FFA500; border-color:#FFA500; }
+

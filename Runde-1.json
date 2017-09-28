@@ -1,0 +1,75 @@
+{
+data: [ {
+		category: "House Music",
+		data: [ { problem: "03cwFtv4Y-M",
+			      solution: "" },
+  				{ problem: "1KCHFJtO8s4",
+			      solution: "" },
+				{ problem: "Z3AKrwna2C8",
+				  solution: "" },
+				{ problem: "Mt7lz_-26OQ",
+				  solution: "" },
+				{ problem: "aWXk-tgSHJY",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Wu Tang",
+		data: [ { problem: "gp9uZjPaB4w",
+			      solution: "" },
+  				{ problem: "lixDK_tMEhE",
+			      solution: "60" },
+				{ problem: "-AizWO6UNok",
+				  solution: "70" },
+				{ problem: "-BP1_1DpeBE",
+				  solution: "200" },
+				{ problem: "mepuOj2Yk-4",
+				  solution: "170" }
+			  ]
+		},
+		{
+		category: "Latin Lingo",
+		data: [ { problem: "DjydOI4MEIw",
+			      solution: "" },
+  				{ problem: "SqiAhfIadU4",
+			      solution: "" },
+				{ problem: "byjPd28KegM",
+				  solution: "" },
+				{ problem: "0EDW6gEQ2DU",
+				  solution: "" },
+				{ problem: "lOB5vw7aNGc",
+				  solution: "",
+				  jeopardy: 2}
+			  ]
+		},
+		{
+		category: "G-Funk",
+		data: [ { problem: "cjqOsYRQI0o",
+				  solution: "" },
+				{ problem: "g5PvCe4xrq0",
+				  solution: "8" },
+				{ problem: "6pG_3jZxzlo",
+				  solution: "" },
+				{ problem: "pb30jrVoU2I",
+				  solution: "" },
+				{ problem: "h3-6O7btipo",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "90ies",
+		data: [ { problem: "TDwutKpVyas",
+				  solution: "" },
+				{ problem: "UMOJvKD_26I",
+				  solution: "" },
+				{ problem: "W2XhhuM9GZo",
+				  solution: "" },
+				{ problem: "--5FIf8Z6TE",
+				  solution: "" },
+				{ problem: "f3V-7DEAgdc",
+				  solution: "" }
+			  ]
+		}
+		]
+}
+

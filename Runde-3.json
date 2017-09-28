@@ -1,0 +1,74 @@
+{
+data: [ {
+		category: "Rap Francais",
+		data: [ { problem: "dY9PY4r83p8",
+			      solution: "" },
+  				{ problem: "OlTT-dBmc7k",
+			      solution: "" },
+				{ problem: "dY9PY4r83p8",
+				  solution: "" },
+				{ problem: "Kg48iWKKC0s",
+				  solution: "" },
+				{ problem: "QFyq-v-hf1U",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Hip-Hop",
+		data: [ { problem: "B87mecbaFp4",
+			      solution: "122" },
+  				{ problem: "I7AsdUk3q6Q",
+			      solution: "" },
+				{ problem: "etwIu8-FlGU",
+				  solution: "" },
+				{ problem: "xKISdd2mKzU",
+				  solution: "150" },
+				{ problem: "_H3Sv2zad6s",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Prodigy",
+		data: [ { problem: "WpIAc9by5iU",
+			      solution: "15" },
+  				{ problem: "JDQfPznkfzU",
+			      solution: "0" },
+				{ problem: "IaOjYPbyiDU",
+				  solution: "" },
+				{ problem: "EsbiKbAh22U",
+				  solution: "" },
+				{ problem: "_1XE5htzD00",
+				  solution: ""}
+			  ]
+		},
+		{
+		category: "FBS",
+		data: [ { problem: "y6EXB63m9Ao",
+				  solution: "211" },
+				{ problem: "TQ05TOj4NYc",
+				  solution: "" },
+				{ problem: "Yr_HootKuvY",
+				  solution: "28" },
+				{ problem: "LOLE1YE_oFQ",
+				  solution: "" },
+				{ problem: "2G5HpRiO2_k",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Querbeet",
+		data: [ { problem: "EI5c6d_Ue5M",
+				  solution: "89" },
+				{ problem: "MSDFVcqrOMs",
+				  solution: "38" },
+				{ problem: "aas2M3gfpmE",
+				  solution: "" },
+				{ problem: "PLVKl7gP0Dc",
+				  solution: "" },
+				{ problem: "tEVsRLhet2k",
+				  solution: "" }
+			  ]
+		}
+		]
+}
+

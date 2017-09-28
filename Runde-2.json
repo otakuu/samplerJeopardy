@@ -1,0 +1,75 @@
+{
+data: [ {
+		category: "Charts",
+		data: [ { problem: "DFmHOCUKTfM",
+			      solution: "" },
+  				{ problem: "JU9TouRnO84",
+			      solution: "30" },
+				{ problem: "w7DTG_O5zow",
+				  solution: "" },
+				{ problem: "qY-muLUZanc",
+				  solution: "" },
+				{ problem: "UW_VlaWDEYM",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Pop",
+		data: [ { problem: "GIbYRfe7m0k",
+			      solution: "40" },
+  				{ problem: "2wkekZpikbY",
+			      solution: "" },
+				{ problem: "x1U1Ue_5kq8",
+				  solution: "" },
+				{ problem: "D4EWppVW98M",
+				  solution: "" },
+				{ problem: "eFQdCRQd3yg",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Deutsch Rap",
+		data: [ { problem: "G6-UlMs7Qxs",
+			      solution: "15" },
+  				{ problem: "PwXYq-NZk4w",
+			      solution: "0" },
+				{ problem: "i5SLzoAJFiw",
+				  solution: "" },
+				{ problem: "g1kDd6yBQZ4",
+				  solution: "" },
+				{ problem: "GfBAOHvK-N0",
+				  solution: "",
+				  jeopardy: 2}
+			  ]
+		},
+		{
+		category: "Hip-Hop",
+		data: [ { problem: "OMOGaugKpzs",
+				  solution: "" },
+				{ problem: "xO0Q3192Jrs",
+				  solution: "" },
+				{ problem: "IH2147R_vJ0",
+				  solution: "" },
+				{ problem: "6wpPk8qk3uQ",
+				  solution: "" },
+				{ problem: "cOeKidp-iWo",
+				  solution: "" }
+			  ]
+		},
+		{
+		category: "Jukebox",
+		data: [ { problem: "r9SENzRLk_M",
+				  solution: "" },
+				{ problem: "wY8_0YDUmGo",
+				  solution: "" },
+				{ problem: "53p7ogqJqqs",
+				  solution: "140" },
+				{ problem: "uf60Ad5OZV8",
+				  solution: "" },
+				{ problem: "qZ22i7QllO8",
+				  solution: "" }
+			  ]
+		}
+		]
+}
+
