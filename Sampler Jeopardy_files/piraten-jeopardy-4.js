@@ -23,7 +23,6 @@
 // create main object
 function Jeopardy( categories, players, rows )
 {
-this.base_URL = "http://gaia-elkartea.com/pdf/jeopardy/";
 
 this.categories = categories;			// should be 5 or 6
 this.players = players;						// should be 3 or 4
@@ -55,10 +54,7 @@ return this;
 ///////////////////////////////////////////////////////////////////////////////
 function Background_Music()
 {
-this.audio = doc.createElement("audio");
-this.audio.setAttribute( "src", jeo.base_URL+"bgmusic-intro.wav" );
-this.audio.setAttribute( "autoplay", true );
-this.audio.setAttribute( "loop", true );
+
 
 return this;
 }
@@ -101,12 +97,9 @@ this.div.style.textAlign = "center";
 this.div.style.borderStyle = "solid";
 this.div.style.borderWidth = "1em";
 this.div.style.borderColor = "#AAAAAA";
-//this.div.style.color = jeo.normal_color;
-//this.div.style.backgroundColor = jeo.background_color;
 this.div.style.color = jeo.background_color;
 this.div.style.backgroundColor = jeo.normal_color;
 this.div.style.opacity = 1;
-//this.div.style.backgroundImage = "url(background.jpg)";
 this.div.style.backgroundRepeat = "no-repeat";
 this.div.style.backgroundPosition = "center";
 this.div.style.display = "none";
@@ -156,14 +149,21 @@ btn7.appendChild(t7);
 btn7.id="btn7";
 this.div.appendChild(btn7);
 
+var youTubeLink = document.createElement("a");
+youTubeLink.href='www.test.ch';
+youTubeLink.id="youTubeLink";
+youTubeLink.target="blank";
+youTubeLink.appendChild(document.createTextNode("go to youtube"));
+this.div.appendChild(youTubeLink);
+
+
 this.iframe = doc.createElement("div");
 this.iframe.id="player";
 this.iframe.style.visibility="hidden";
 this.iframe.style.opacity=0;
 this.iframe.style.display = "none";
 
-this.text = doc.createTextNode( "Das ist das Problem. "+
-								"Es ist lang, um zu testen wie das mit dem Zeilenumbruch fluppt." );
+this.text = doc.createTextNode("");
 this.div.appendChild(this.text);
 this.div.appendChild(this.iframe);
 doc.body.appendChild(this.div);
@@ -392,34 +392,14 @@ else if( e.which == 52 ){   // '4' => player 4
 ///////////////////////////////////////////////////////////////////////////////
 function cell_click(e)
 {
-/*
-var msg = "click at " +
-		"x = " + e.clientX + ", " +
-		"y = " + e.clientY +
-		", this = " + this +
-		", this.value = " + this.value +
-		", this.data = " + this.data;
-for( i=0; i<this.childNodes.length; ++i )
-	{
-	msg += ", this.childNodes["+i+"] = " + this.childNodes[i] +
-		", this.childNodes["+i+"].value = " + this.childNodes[i].value +
-		", this.childNodes["+i+"].data = " + this.childNodes[i].data;
-	}
-alert(msg);
 
-alert( "score_table="+score_table );
-alert( "score_table.td="+score_table.td );
-alert( "score_table.td[0][0]="+score_table.td[0][0] );
-*/
 var is_found = false;
 
 if( jeo.selected_cell != undefined )
 	return;
 
-//alert( "this.style.color = "+this.style.color );
 if( this.style.color != 0 )
 	{
-	//alert( "cell ["+i+"]["+j+"] already has color "+this.style.color );
 	alert( "This problem was already solved!" );
 	return;
 	}
@@ -428,7 +408,6 @@ for( i=0; i<jeo.categories; ++i )
 	for( j=0; j<jeo.rows; ++j )
 		if( this == score_table.td[i][j] )
 			{
-			//alert( "cell ["+i+"]["+j+"] selected" );
 			jeo.selected_cell = [i, j];
 			score_table.td[i][j].style.color = jeo.highlight_color;
 			jeo.points = 100*(1+jeo.selected_cell[1]);
@@ -488,73 +467,18 @@ jeo.selected_player = undefined;
 player_table.td0[player-1].style.color = jeo.normal_color;
 }
 
-///////////////////////////////////////////////////////////////////////////////
-function load_fake_round_file()
-{
-var round_data = eval("(" + testdata + ")");
-//alert( testdata );
-//alert( round_data.data );
-
-jeo.round = round_data.data;
-
-for( i=0; i<jeo.categories; ++i )
-	score_table.td0_text[i].data = jeo.round[i].base_URL;
-
-return round_data.data;
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 function load_round_file()
 {
-//var default_URL = jeo.base_URL+"runde-1.txt";
-var default_URL = jeo.base_URL+"Runde-1.json";
-var round_URL = prompt( "URL der Runden-Datei:", default_URL );
-if( !round_URL )
-	return;
-
-//alert( round_URL );
-
-var round_request = new XMLHttpRequest();
-
-round_request.open( "GET", round_URL, false ); // (method, URL, async?)
-//round_request.setRequestHeader( "User-Agent", navigator.userAgent );
-try {
-	round_request.send( null );
-	} catch (error) {
-	alert( "error: XMLHttpRequest.send() failed, "+error.name+": "+error.message );
-	}
-
-if( round_request.status!=200 )
-	{
-	alert( "error: XMLHttpRequest()="+round_request.status );
-	return undefined;
-	}
-
-//alert(round_request.responseText);
-
-var round_data = eval("(" + round_request.responseText + ")");
-//alert( round_data );
-//alert( round_data.data );
 	
-jeo.round = round_data.data;
+jeo.round = jsonData.data;
 
 for( i=0; i<jeo.categories; ++i )
 	score_table.td0_text[i].data = jeo.round[i].category;
 
-return round_data.data;
-/*
-var oRequest = new XMLHttpRequest();
-var sURL  = "http://"+self.location.hostname+"/faq/requested_file.htm";
+return jsonData.data;
 
-oRequest.open("GET",sURL,false);
-oRequest.setRequestHeader("User-Agent",navigator.userAgent);
-oRequest.send(null)
-
-if (oRequest.status==200)
-	alert(oRequest.responseText);
-else
-	alert("Error executing XMLHttpRequest call!");
-*/
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -566,9 +490,7 @@ if( jeo.selected_cell==undefined )
 	return;
 	}
 
-//alert( "selected_cell="+jeo.selected_cell );
-//alert("problem");
-//alert("overlay.text.data "+overlay.text.data);
+
 if( jeo.round==undefined )
 	overlay.text.data = "Zuerst sollten Runden-Daten eingelesen werden. "+
 						"Dies geschieht wenn man die L-Taste betätigt. "+
@@ -577,40 +499,15 @@ if( jeo.round==undefined )
 else
 	{
 	var cell = jeo.round[jeo.selected_cell[0]].data[jeo.selected_cell[1]];
-	//alert( "(i, j) = ("+jeo.selected_cell[0]+", "+jeo.selected_cell[0]+")" );
-	//alert( "jeopardy="+cell.jeopardy );
+	
 	if( cell.jeopardy )
 		jeo.jeopardy = true;
 	else
 		jeo.jeopardy = false;
-	if( cell.problem )
-		{
-		overlay.div.style.backgroundImage = "url(undefined)";
-/*
-		if( cell.jeopardy )
-			overlay.text.data = "DOUBLE JEOPARDY: ";
-		else
-			overlay.text.data = "";
-*/
-		overlay.text.data = "";
-		player.loadVideoById(cell.problem,cell.solution);
-
-		}
-	else
-		{
-/*
-		if( cell.jeopardy )
-			overlay.text.data = "DOUBLE JEOPARDY: ";
-		else
-			overlay.text.data = "";
-*/
-		overlay.div.style.backgroundImage = "url("+cell.problem_img+")";
-		overlay.text.data = "";
-		//this.iframe.src=cell.problem+"?autoplay=1&enablejsapi=1&origin=*";
-		player.loadVideoById(cell.problem,cell.solution);
-
-
-		}
+	
+		youTubeLink.href="https://youtu.be/"+cell.problem+"?t="+cell.solution;
+		player.loadVideoById({'videoId': cell.problem, 'startSeconds': cell.solution});
+	
 	}
 
 document.getElementById('player').style.visibility = "visible";	

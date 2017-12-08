@@ -1,4 +1,4 @@
-{
+var jsonData = {
 data: [ {
 		category: "Charts",
 		data: [ { problem: "DFmHOCUKTfM",
