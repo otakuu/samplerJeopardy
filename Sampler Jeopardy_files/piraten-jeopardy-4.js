@@ -21,7 +21,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // create main object
-function Jeopardy( categories, players, rows )
+function Jeopardy(categories, players, rows)
 {
 
 this.categories = categories;			// should be 5 or 6
@@ -54,8 +54,6 @@ return this;
 ///////////////////////////////////////////////////////////////////////////////
 function Background_Music()
 {
-
-
 return this;
 }
 
@@ -67,7 +65,6 @@ var headline_div = doc.createElement("div");
 
 var headline = doc.createElement("h2");
 headline.align="center";
-
 
 var headline_text = doc.createTextNode("Sampler Jeopardy");
 headline.appendChild(headline_text);
@@ -149,12 +146,21 @@ btn7.appendChild(t7);
 btn7.id="btn7";
 this.div.appendChild(btn7);
 
+this.div.appendChild(document.createElement("br"));
+
 var youTubeLink = document.createElement("a");
-youTubeLink.href='www.test.ch';
 youTubeLink.id="youTubeLink";
+youTubeLink.text="Watch on Youtube";
 youTubeLink.target="blank";
-youTubeLink.appendChild(document.createTextNode("go to youtube"));
 this.div.appendChild(youTubeLink);
+
+this.div.appendChild(document.createElement("br"));
+
+var youTubeLinkSolution = document.createElement("a");
+youTubeLinkSolution.id="youTubeLinkSolution";
+youTubeLinkSolution.text="[s]";
+youTubeLinkSolution.target="blank";
+this.div.appendChild(youTubeLinkSolution);
 
 
 this.iframe = doc.createElement("div");
@@ -174,7 +180,7 @@ return this;
 
 ///////////////////////////////////////////////////////////////////////////////
 // create main table
-function Score_Table( categories, players, rows )
+function Score_Table(categories, players, rows)
 {
 var table = doc.createElement("table");
 table.width="100%";
@@ -451,12 +457,8 @@ if( jeo.is_locked )
 jeo.is_locked = true;
 jeo.selected_player = player;
 
-//alert( "Spieler "+player );
-
-//player_table.td0[player-1].style.fontWeight = "bold";
 player_table.td0[player-1].style.color = jeo.highlight_color;
-//player_table.td0[player-1].style.backgroundColor = "#000000";
-//player_table.td0[player-1].style.textDecoration = "blink";
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -505,8 +507,10 @@ else
 	else
 		jeo.jeopardy = false;
 	
-		youTubeLink.href="https://youtu.be/"+cell.problem+"?t="+cell.solution;
-		player.loadVideoById({'videoId': cell.problem, 'startSeconds': cell.solution});
+		youTubeLink.href="https://youtu.be/"+cell.problem+"?t="+cell.delay;
+		youTubeLinkSolution.href="https://youtu.be/"+cell.solution;
+		//player.loadVideoById({'videoId': cell.problem, 'startSeconds': cell.solution});
+		window.open(youTubeLink.href, '_blank');
 	
 	}
 
@@ -529,16 +533,13 @@ if( jeo.selected_cell==undefined )
 	return;
 	}
 
-//alert("solution");
 if( jeo.round==undefined )
 	{
-	overlay.div.style.backgroundImage = "url(undefined)";
 	overlay.text.data = "Sind immer noch keine Runden-Daten eingelesen worden? "+
 						"Bist Du ein Beta-Tester oder so?";
 	}
 else
 	{
-	overlay.div.style.backgroundImage = "url(undefined)";
 	overlay.text.data = jeo.round[jeo.selected_cell[0]].data[jeo.selected_cell[1]].solution;
 	}
 
@@ -625,23 +626,13 @@ jeo.selected_cell = undefined;
 // main code
 ///////////////////////////////////////////////////////////////////////////////
 
-//document.getElementById("Bereich").addEventListener( "click", handle_click, false );
-
-//alert('screen size is '+screen.width+'x'+screen.height);
-
 var doc = document;				// just a shortcut
-
 doc.addEventListener( "keydown", keydown_handler, false );
-
-var jeo = new Jeopardy( 5, 4, 5 ); // categories, players, rows
-
-//var bgmusic = Background_Music();
+var jeo = new Jeopardy(4, 4, 5); // categories, players, rows
 
 var overlay = Overlay();
-
 var headline = Headline();
-
-var score_table = new Score_Table( jeo.categories, jeo.players, jeo.rows );
+var score_table = new Score_Table(jeo.categories, jeo.players, jeo.rows);
 
 var p = doc.createElement("p");
 doc.body.appendChild(p);

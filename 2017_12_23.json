@@ -1,72 +1,59 @@
 var jsonData = {
 data: [ {
-		category: "Girly",
+		category: "Meitschi",
 		data: [ { problem: "yugldxpRDMo",
-			      solution: "10" },
+			      delay: "10",
+				  solution: "gJLIiF15wjQ?t=50"},
   				{ problem: "OlTT-dBmc7k",
-			      solution: "" },
+			      delay: "" },
 				{ problem: "dY9PY4r83p8",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "Kg48iWKKC0s",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "QFyq-v-hf1U",
-				  solution: "" }
+				  delay: "" }
 			  ]
 		},
 		{
-		category: "Hip-Hop",
+		category: "Buebe",
 		data: [ { problem: "B87mecbaFp4",
-			      solution: "122" },
+			      delay: "122" },
   				{ problem: "I7AsdUk3q6Q",
-			      solution: "" },
+			      delay: "" },
 				{ problem: "etwIu8-FlGU",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "xKISdd2mKzU",
-				  solution: "150" },
+				  delay: "150" },
 				{ problem: "_H3Sv2zad6s",
-				  solution: "" }
+				  delay: "" }
 			  ]
 		},
 		{
-		category: "Prodigy",
+		category: "Schwiizer Musig",
 		data: [ { problem: "WpIAc9by5iU",
-			      solution: "15" },
+			      delay: "15" },
   				{ problem: "JDQfPznkfzU",
-			      solution: "0" },
+			      delay: "0" },
 				{ problem: "IaOjYPbyiDU",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "EsbiKbAh22U",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "_1XE5htzD00",
-				  solution: ""}
+				  delay: ""}
 			  ]
 		},
 		{
-		category: "FBS",
-		data: [ { problem: "y6EXB63m9Ao",
-				  solution: "211" },
-				{ problem: "TQ05TOj4NYc",
-				  solution: "" },
-				{ problem: "Yr_HootKuvY",
-				  solution: "28" },
-				{ problem: "LOLE1YE_oFQ",
-				  solution: "" },
-				{ problem: "2G5HpRiO2_k",
-				  solution: "" }
-			  ]
-		},
-		{
-		category: "Electro",
+		category: "?",
 		data: [ { problem: "EI5c6d_Ue5M",
-				  solution: "89" },
+				  delay: "89" },
 				{ problem: "MSDFVcqrOMs",
-				  solution: "38" },
+				  delay: "38" },
 				{ problem: "aas2M3gfpmE",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "PLVKl7gP0Dc",
-				  solution: "" },
+				  delay: "" },
 				{ problem: "tEVsRLhet2k",
-				  solution: "" }
+				  delay: "" }
 			  ]
 		}
 		]
