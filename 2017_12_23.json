@@ -1,59 +1,58 @@
 var jsonData = {
 data: [ {
 		category: "Meitschi",
-		data: [ { problem: "yugldxpRDMo",
-			      delay: "10",
+		data: [ { problem: "yugldxpRDMo?t=10",
 				  solution: "gJLIiF15wjQ?t=50"},
-  				{ problem: "OlTT-dBmc7k",
-			      delay: "" },
-				{ problem: "dY9PY4r83p8",
-				  delay: "" },
-				{ problem: "Kg48iWKKC0s",
-				  delay: "" },
-				{ problem: "QFyq-v-hf1U",
-				  delay: "" }
+  				{ problem: "HmQbk5Zlmdk?t=10",
+			      solution: "IbV7Mzx6m5Y" },
+				{ problem: "fXWkmwuOo30?t=15",
+				  solution: "ff" },
+				{ problem: "QKxYdAdmnJY?t=37",
+				  solution: "ff" },
+				{ problem: "wdclClo2oA8?t=21",
+				  solution: "XYXczDB8VrY" }
 			  ]
 		},
 		{
 		category: "Buebe",
-		data: [ { problem: "B87mecbaFp4",
-			      delay: "122" },
-  				{ problem: "I7AsdUk3q6Q",
-			      delay: "" },
-				{ problem: "etwIu8-FlGU",
-				  delay: "" },
-				{ problem: "xKISdd2mKzU",
-				  delay: "150" },
-				{ problem: "_H3Sv2zad6s",
-				  delay: "" }
+		data: [ { problem: "zY0--b6DLqQ",
+			      solution: "zY0--b6DLqQ" },
+  				{ problem: "XVCNtyZdGD0?t=17",
+			      solution: "hTWKbfoikeg" },
+				{ problem: "PEQxWg92Ux4",
+				  solution: "3KL9mRus19o" },
+				{ problem: "it2gZnA7xBY?t=93",
+				  solution: "ryDOy3AosBw" },
+				{ problem: "MSDFVcqrOMs?t=39",
+				  solution: "Xu3FTEmN-eg?t=14" }
 			  ]
 		},
 		{
 		category: "Schwiizer Musig",
-		data: [ { problem: "WpIAc9by5iU",
-			      delay: "15" },
-  				{ problem: "JDQfPznkfzU",
-			      delay: "0" },
-				{ problem: "IaOjYPbyiDU",
-				  delay: "" },
-				{ problem: "EsbiKbAh22U",
-				  delay: "" },
-				{ problem: "_1XE5htzD00",
-				  delay: ""}
+		data: [ { problem: "2wkekZpikbY",
+			      solution: "2wkekZpikbY" },
+  				{ problem: "vhOqeM4fyZA?t=13",
+			      solution: "ff" },
+				{ problem: "TeLK1iZdy1w?t=20",
+				  solution: "Ckom3gf57Yw?t=15" },
+				{ problem: "7_SAMrDnXOE?t=19",
+				  solution: "ff" },
+				{ problem: "s0-cMdewJpQ",
+				  solution: "3mbBbFH9fAg?t=22"}
 			  ]
 		},
 		{
-		category: "?",
-		data: [ { problem: "EI5c6d_Ue5M",
-				  delay: "89" },
-				{ problem: "MSDFVcqrOMs",
-				  delay: "38" },
-				{ problem: "aas2M3gfpmE",
-				  delay: "" },
-				{ problem: "PLVKl7gP0Dc",
-				  delay: "" },
-				{ problem: "tEVsRLhet2k",
-				  delay: "" }
+		category: "No Gender",
+		data: [ { problem: "m_HnBac5jWs?t=11",
+				  solution: "ff" },
+				{ problem: "uor4XLlZQkQ?t=10",
+				  solution: "JYIaWeVL1JM" },
+				{ problem: "GhgG5dEHQXM?t=17",
+				  solution: "GhgG5dEHQXM?t=17" },
+				{ problem: "G6-UlMs7Qxs?t=22",
+				  solution: "VUosAGDM8Sg?t=17" },
+				{ problem: "o1Gxr3YVvrE?t=33",
+				  solution: "tcV7VN3l3bY" }
 			  ]
 		}
 		]

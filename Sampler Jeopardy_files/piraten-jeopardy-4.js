@@ -57,22 +57,6 @@ function Background_Music()
 return this;
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// create headline
-function Headline()
-{
-var headline_div = doc.createElement("div");
-
-var headline = doc.createElement("h2");
-headline.align="center";
-
-var headline_text = doc.createTextNode("Sampler Jeopardy");
-headline.appendChild(headline_text);
-headline_div.appendChild(headline);
-doc.body.appendChild(headline_div);
-
-return this;
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 // create problem/solution overlay
@@ -507,10 +491,8 @@ else
 	else
 		jeo.jeopardy = false;
 	
-		youTubeLink.href="https://youtu.be/"+cell.problem+"?t="+cell.delay;
+		youTubeLink.href="https://youtu.be/"+cell.problem;
 		youTubeLinkSolution.href="https://youtu.be/"+cell.solution;
-		//player.loadVideoById({'videoId': cell.problem, 'startSeconds': cell.solution});
-		window.open(youTubeLink.href, '_blank');
 	
 	}
 
@@ -520,7 +502,6 @@ document.getElementById('player').style.display = "block";
 
 overlay.div.style.visibility = "visible";
 overlay.div.style.display = "block";
-
 
 }
 
@@ -568,8 +549,7 @@ if( jeo.selected_cell==undefined )
 // add points
 score_table.td[jeo.selected_cell[0]][jeo.selected_cell[1]].style.backgroundColor = jeo.player_color[jeo.selected_player-1];
 var points = parseInt(player_table.td1[jeo.selected_player-1].childNodes[0].data);
-//alert("previous points="+points);
-//points += 100*(1+jeo.selected_cell[1]);
+
 points += jeo.points;
 player_table.td1[jeo.selected_player-1].childNodes[0].data = points;
 
@@ -594,8 +574,6 @@ if( jeo.selected_cell==undefined )
 
 // subtract points
 var points = parseInt(player_table.td1[jeo.selected_player-1].childNodes[0].data);
-//alert("previous points="+points);
-//points -= 100*(1+jeo.selected_cell[1]);
 points -= jeo.points;
 player_table.td1[jeo.selected_player-1].childNodes[0].data = points;
 
@@ -618,7 +596,6 @@ if( jeo.selected_cell==undefined )
 	}
 
 show_solution();
-//jeo.is_locked = false;
 jeo.selected_cell = undefined;
 }
 
@@ -631,7 +608,6 @@ doc.addEventListener( "keydown", keydown_handler, false );
 var jeo = new Jeopardy(4, 4, 5); // categories, players, rows
 
 var overlay = Overlay();
-var headline = Headline();
 var score_table = new Score_Table(jeo.categories, jeo.players, jeo.rows);
 
 var p = doc.createElement("p");
@@ -639,7 +615,6 @@ doc.body.appendChild(p);
 
 var player_table = Player_Table( 4 );
 
-//load_fake_round_file();
 load_round_file();
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -678,5 +653,3 @@ on key input n: 	sub_points(); locked=false; 		play_burp();	show_problem();		// 
 on key input g: 	set_solved(); 						play_sad();		show_solution();	// players gave up
 on click in player cell: +/- edit mode														// manual correction
 */
-
-doc.title="Sampler Jeopardy";
